@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Specificity in CSS</title>
+	<style>
+		header.navigation p {
+		  color: blue;
+		}
+		p.blurb {
+		  color: red;
+		}
+		p {
+		  color: green !important;
+		}
+		#iamid {
+		  color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<header class="navigation">
+		<p class="blurb" id="iamid" style="color: aqua;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero soluta enim aut! Nihil nam obcaecati, fugiat sint sit libero voluptate eos incidunt odio neque cum, dignissimos aperiam, magnam nisi debitis.</p>
+	</header>
+	<div>
+		inline styling -> id styling -> class, pseudo-class, attribute styling -> no. of elements is the order for most to least being used for styling and above all that is "!important"
+	</div>
+</body>
+</html>
